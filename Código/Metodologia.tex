@@ -1,0 +1,163 @@
+\section{Metodologia}
+
+\subsection{Modelo de Lotka-Volterra}
+
+Em sua dissertação de mestrado \cite{ij_al_2017}, Isaías de Jesus utilizou o modelo de Lotka-Volterra para modelar o controle biológico de pragas da cana-de-açúcar. A praga em questão era \textit{Diatraea Saccharalis} (broca da cana-de-açúcar) e seu predador era \textit{Cotesia flavipes} (vespa). Através dessa modelagem ele pôde encontrar computacionalmente a situação de equilíbrio em diferentes cenários e definir a estratégia de controle mais adequada. Eis abaixo as equações do modelo e seus parâmetros:
+
+$$\left\{
+\begin{array}{l}
+\dfrac{dx}{dt}=x(a-by)\\
+\dfrac{dy}{dt}=y(cx-d)
+\end{array}
+\right.$$
+
+\begin{itemize}
+    \item $x=x(t)$: população de brocas (em função do tempo); 
+    \item $y=y(t)$: população de vespas (em função do tempo);
+    \item $a$: taxa de crescimento da população de brocas na ausência de vespas;
+    \item $b$: taxa de decrescimento da população de brocas devido aos encontros com vespas;
+    \item $c$: taxa de crescimento da população de vespas devido à predação;
+    \item $d$: taxa de decrescimento da população de vespas na ausência de brocas.
+\end{itemize}
+
+\
+
+\subsubsection{Análise dimensional}
+
+Vamos atribuir grandezas $M$ para massa e $T$ para tempo.
+
+As grandezas de $x$ e $y$ serão massas, pois representam as populações. Por ser uma taxa, $a$ terá grandeza $\frac{1}{T}$. Para que $-by$ possa ser somado a $a$, $b$ deverá ter grandeza $\frac{1}{MT}$. Disso conclui-se que $\frac{dx}{dt}$ tem grandeza $\frac{M}{T}$.
+
+Em $\frac{dy}{dt}$ ocorre algo bem semelhante. As grandezas de $x$ e $y$ continuam sendo massas. Por ser uma taxa, $d$ terá grandeza $\frac{1}{T}$. Logo, para que $cx$ possa ser somado a $-d$, $c$ deverá ter grandeza $\frac{1}{MT}$. Disso resulta que $\frac{dx}{dt}$ tem grandeza $\frac{M}{T}$.
+
+Faz sentido que as grandezas obtidas para $\frac{dx}{dt}$ e $\frac{dy}{dt}$ sejam essas, já que as populações variam ao longo do tempo.
+
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+%& \multicolumn{3}{c|}{Notas}\\
+%\cline{2 - 7} % linha horizontal entre as colunas
+% 2 e 4
+Parâmetro & Unidade & Descrição\\
+\hline
+$x=x(t)$ & $M$ & População de presas\\
+$y=y(t)$ & $M$ & População de predadores\\
+$a$ & $1/T$ & Taxa de crescimento de presas na ausência de predadores\\
+$b$ & $1/MT$ & Taxa de decrescimento de presas devido à predação\\
+$c$ & $1/MT$ & Taxa de crescimento de predadores devido à predação\\
+$d$ & $1/T$ & Taxa de decrescimento de predadores na ausência de presas\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\subsection{Modelo de Holling-Tanner}
+
+Para estudar a interação entre pulgões (\textit{Toxoptera citricida}) e joaninhas (\textit{Cycloneda sanguinea}), Magda Peixoto, Laécio Barros e Rodney Bassanezi ajustaram em seu artigo \cite{mp_lb_rb_2005} o modelo predador-presa de Holling-Tanner para interpretar biologicamente seus parâmetros. Desse modo, o controle da praga pulgão na plantação de citros pôde ser feito por meio de sua predadora, a joaninha. Eis abaixo as equações do modelo e seus parâmetros:
+
+$$\left\{
+\begin{array}{l}
+\dfrac{dx}{dt}=rx\left(1-\dfrac{x}{K}\right)-\dfrac{mxy}{A+x}\\
+\dfrac{dy}{dt}=sy\left(1-\dfrac{cy}{x}\right)
+\end{array}
+\right.$$
+
+\begin{itemize}
+    \item $x=x(t)$: população de pulgões (em função do tempo); 
+    \item $y=y(t)$: população de joaninhas (em função do tempo);
+    \item $r$: taxa de crescimento intrínseco dos pulgões;
+    \item $K$: capacidade suporte dos pulgões na ausência de joaninhas;
+    \item $m$: número máximo de pulgões que podem ser consumidos por uma joaninha em cada unidade de tempo;
+    \item $A$: número de pulgões necessários para atingir metade do número máximo $m$;
+    \item $s$: taxa de crescimento intrínseco das joaninhas;
+    \item $c$: medida da qualidade alimentícia proporcionada pelo pulgão para sua conversão em nascimento de joaninhas.
+\end{itemize}
+
+\subsubsection{Análise dimensional}
+
+Vamos atribuir grandezas $M$ para massa e $T$ para tempo.
+
+As grandezas de $x$ e $y$ serão massas, pois representam as populações. Por ser uma taxa, $r$ terá grandeza $\frac{1}{T}$. Para que $\frac{x}{K}$ possa ser somado à constante 1, $K$ deverá ter grandeza $M$ (o que torna $\frac{x}{K}$ constante). $A$ deverá ter grandeza $M$ para poder ser somado a $x$. Há no numerador da segunda fração a grandeza $M^2$ de $xy$. Para que essa fração seja somada à primeira, sua grandeza deve ser também $\frac{M}{T}$, o que implica que a grandeza de $m$ deve ser $\frac{1}{T}$. Com isso conclui-se que $\frac{dx}{dt}$ tem grandeza $\frac{M}{T}$.
+
+Em $\frac{dy}{dt}$, por ser uma taxa, $s$ terá grandeza $\frac{1}{T}$. As grandezas de $x$ e $y$ continuam sendo massas. Logo, para que a soma da fração com a constante 1 possa ocorrer, $c$ deverá ser uma constante qualquer (sem grandeza). Logo, $\frac{dy}{dt}$ tem grandeza $\frac{M}{T}$ também.
+
+Faz sentido que as grandezas obtidas para $\frac{dx}{dt}$ e $\frac{dy}{dt}$ sejam essas, já que as populações variam ao longo do tempo.
+
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+%& \multicolumn{3}{c|}{Notas}\\
+%\cline{2 - 7} % linha horizontal entre as colunas
+% 2 e 4
+Parâmetro & Unidade & Descrição\\
+\hline
+$x=x(t)$ & $M$ & População de presas\\
+$y=y(t)$ & $M$ & População de predadores\\
+$r$ & $1/T$ & Taxa de crescimento intrínseco de presas\\
+$K$ & $M$ & Capacidade suporte das presas na ausência dos predadores\\
+$m$ & $1/T$ & Máximo de presas que podem ser consumidas por um predador\\
+$A$ & $M$ & Presas necessárias para atingir $m/2$\\
+$s$ & $1/T$ & Taxa de crescimento intrínseco de predadores\\
+$c$ & constante & Medida da qualidade alimentícia proporcionada pela presa\\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\subsection{Modelo de Rosenzweig-MacArthur}
+
+O modelo com o qual pretendemos modelar os dois problemas anteriores é o de Rosenzweig-MacArthur, que já foi utilizado por Luiz Rodrigues, Simone Ossani e Diomar Mistro para simular um sistema predador-presa em que o predador é infectado por uma doença, o que adiciona à sua equação uma taxa de mortalidade. 
+
+Em nosso estudo, a simulação será feita com a inclusão de um superpredador sem capacidade de reprodução. Em cada um dos casos ele será de uma espécie predadora de vespas e joaninhas respectivamente. A ideia é que, embora não se reproduza, sua presença no sistema cause uma redução (ainda que possivelmente temporária) de predadores. Eis abaixo as equações do sistema (os parâmetros descritos na análise dimensional serão detalhados posteriormente):
+
+$$\left\{
+\begin{array}{l}
+\dfrac{dx}{dt}=rx\left(1-\dfrac{x}{K}\right)-\dfrac{mxy}{A+x}\\
+\dfrac{dy}{dt}=\dfrac{cmxy}{A+x}-sy
+\end{array}
+\right.$$
+
+% \begin{itemize}
+%     \item $x=x(t)$: população de presas (em função do tempo); 
+%     \item $y=y(t)$: população de predadores (em função do tempo);
+%     \item $r$: taxa de crescimento intrínseco das presas;
+%     \item $K$: capacidade suporte das presas na ausência dos predadores;
+%     \item $m$: número máximo de presas que podem ser consumidas por um predador em cada unidade de tempo;
+%     \item $A$: número de presas necessárias para atingir metade do número máximo $m$;
+%     \item $s$: taxa de mortalidade da população de predadores;
+%     \item $c$: medida da qualidade alimentícia proporcionada pela presa para sua conversão em nascimento de predadores.
+% \end{itemize}
+
+\subsubsection{Análise dimensional}
+
+Vamos atribuir grandezas $M$ para massa e $T$ para tempo.
+
+As grandezas de $x$ e $y$ serão massas, pois representam as populações. Por ser uma taxa, $r$ terá grandeza $\frac{1}{T}$. Para que $\frac{x}{K}$ possa ser somado à constante 1, $K$ deverá ter grandeza $M$ (o que torna $\frac{x}{K}$ constante). $A$ deverá ter grandeza $M$ para poder ser somado a $x$. Há no numerador da segunda fração a grandeza $M^2$ de $xy$. Para que essa fração seja somada à primeira, sua grandeza deve ser também $\frac{M}{T}$, o que implica que a grandeza de $m$ deve ser $\frac{1}{T}$. Com isso conclui-se que $\frac{dx}{dt}$ tem grandeza $\frac{M}{T}$.
+
+Em $\frac{dy}{dt}$, por ser uma taxa, $s$ terá grandeza $\frac{1}{T}$. As grandezas de $x$ e $y$ continuam sendo massas. $A$ deverá ter grandeza $M$ para poder ser somado a $x$. Há no numerador da fração a grandeza $M^2$ de $xy$. Logo, $\frac{dy}{dt}$ tem grandeza $\frac{M}{T}$ também. Sabe-se que a grandeza de $m$ é $\frac{1}{T}$, então $c$ deverá ser uma constante qualquer, sem grandeza, para que a soma com $-sy$ possa ocorrer. Portato, $\frac{dy}{dt}$ tem grandeza $\frac{M}{T}$ também.
+
+Faz sentido que as grandezas obtidas para $\frac{dx}{dt}$ e $\frac{dy}{dt}$ sejam essas, já que as populações variam ao longo do tempo.
+
+\begin{center}
+\begin{tabular}{| c | c | c |}
+\hline
+%& \multicolumn{3}{c|}{Notas}\\
+%\cline{2 - 7} % linha horizontal entre as colunas
+% 2 e 4
+Parâmetro & Unidade & Descrição\\
+\hline
+$x=x(t)$ & $M$ & População de presas\\
+$y=y(t)$ & $M$ & População de predadores\\
+$r$ & $1/T$ & Taxa de crescimento intrínseco de presas\\
+$K$ & $M$ & Capacidade suporte das presas na ausência dos predadores\\
+$m$ & $1/T$ & Máximo de presas que podem ser consumidas por um predador\\
+$A$ & $M$ & Presas necessárias para atingir $m/2$\\
+$s$ & $1/T$ & Taxa de mortalidade de predadores\\
+$c$ & constante & Medida da qualidade alimentícia proporcionada pela presa\\
+\hline
+\end{tabular}
+\end{center}
+
+%PODE FAZER TABELA COM PARÂMETRO | UNIDADE | DESCRIÇÃO | VALOR (PODE OMITIR NA A1) ok, vou fazer

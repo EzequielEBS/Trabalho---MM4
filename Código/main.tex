@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm]{geometry}
+
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{minted}
+% adicionar suporte ao idioma pt-br
+\usepackage[brazil]{babel}
+
+% Utilização de imagens
+\usepackage{graphicx} 
+\usepackage{wrapfig}
+
+% Possibilita o uso do H no posicionamento de figuras
+\usepackage{float} 
+
+% das referências
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{url}
+\usepackage{hyperref}
+
+% permite criação região de comentário
+\usepackage{comment}
+
+\usepackage[brazil]{babel} % \usepackage[latin1]{inputenc}
+\usepackage{a4wide}
+\setlength{\oddsidemargin}{-0.2in}
+% % \setlength{\oddsidemargin}{0.2in}
+\setlength{\evensidemargin}{-0.2in}
+% % \setlength{\evensidemargin}{0.5in}
+% % \setlength{\textwidth}{5.5in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{10in}
+\usepackage[]{amsfonts} \usepackage[]{amsmath}
+\usepackage[]{amssymb} \usepackage[]{latexsym}
+\usepackage{graphicx,color} \usepackage{amsthm}
+\usepackage{mathrsfs} \usepackage{url}
+\usepackage{cancel} \usepackage[inline]{enumitem}
+\usepackage{xifthen} \usepackage{tikz}
+\usetikzlibrary{automata,arrows,positioning,calc}
+
+\numberwithin{equation}{section}
+
+\setlength{\parindent}{12 pt}
+
+\title{Modelos Matemáticos Predador-Presa no Controle de Pragas em Plantações de Citros e Cana-de-açúcar}
+\author{Ezequiel de Braga Santos, Pedro Lima Garcia \\ Escola de Matemática Aplicada, FGV - EMAp \\ Rio de Janeiro/RJ.}
+
+\date{}
+
+\begin{document}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% Estrutura do trabalho
+
+\include{Introducao}
+\newpage
+
+\include{Metodologia}
+\newpage
+
+% \include{Resultados}
+% \newpage
+
+% \include{Discussao}
+% \newpage
+
+% \include{Conclusao}
+% \newpage
+
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{bibliografia/referencias}
+
+\end{document}
