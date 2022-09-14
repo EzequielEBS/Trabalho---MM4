@@ -2,7 +2,7 @@
 
 \subsection{Modelo de Lotka-Volterra}
 
-Em sua dissertação de mestrado (JESUS, 2018) \cite{ij_2018}, Isaías de Jesus utilizou o modelo de Lotka-Volterra para modelar o controle biológico de pragas da cana-de-açúcar. A praga em questão era \textit{Diatraea Saccharalis} (broca da cana-de-açúcar) e seu predador era \textit{Cotesia flavipes} (vespa). Através dessa modelagem ele pôde encontrar computacionalmente a situação de equilíbrio em diferentes cenários e definir a estratégia de controle mais adequada. Eis abaixo as equações do modelo e seus parâmetros:
+Em sua dissertação de mestrado, Isaías de Jesus (2018) \cite{ij_2018} utilizou o modelo de Lotka-Volterra para modelar o controle biológico de pragas da cana-de-açúcar. A praga em questão era \textit{Diatraea Saccharalis} (broca da cana-de-açúcar) e seu predador era \textit{Cotesia flavipes} (vespa). Através dessa modelagem ele pôde encontrar computacionalmente a situação de equilíbrio em diferentes cenários e definir a estratégia de controle mais adequada. Eis abaixo as equações do modelo e seus parâmetros:
 
 $$\left\{
 \begin{array}{l}
@@ -54,7 +54,7 @@ $d$ & $1/T$ & Taxa de decrescimento de predadores na ausência de presas\\
 
 \subsection{Modelo de Holling-Tanner}
 
-Para estudar a interação entre pulgões (\textit{Toxoptera citricida}) e joaninhas (\textit{Cycloneda sanguinea}), Magda Peixoto, Laécio Barros e Rodney Bassanezi ajustaram em seu artigo (PEIXOTO, BARROS, BASSANEZI, 2005) \cite{mp_lb_rb_2005} o modelo predador-presa de Holling-Tanner para interpretar biologicamente seus parâmetros. Desse modo, o controle da praga pulgão na plantação de citros pôde ser feito por meio de sua predadora, a joaninha.
+Para estudar a interação entre pulgões (\textit{Toxoptera citricida}) e joaninhas (\textit{Cycloneda sanguinea}), Magda Peixoto, Laécio Barros e Rodney Bassanezi (2005) \cite{mp_lb_rb_2005} ajustaram em seu artigo o modelo predador-presa de Holling-Tanner para interpretar biologicamente seus parâmetros. Desse modo, o controle da praga pulgão na plantação de citros pôde ser feito por meio de sua predadora, a joaninha.
 
 $$\left\{
 \begin{array}{l}
@@ -108,7 +108,7 @@ $c$ & constante & Medida da qualidade alimentícia proporcionada pela presa\\
 
 \subsection{Modelo de Rosenzweig-MacArthur}
 
-O modelo com o qual pretendemos modelar os dois problemas anteriores é o de Rosenzweig-MacArthur, que já foi utilizado por Luiz Rodrigues, Simone Ossani e Diomar Mistro para simular um sistema predador-presa em que o predador é infectado por uma doença, o que adiciona à equação uma taxa de mortalidade (RODRIGUES, OSSANI, MISTRO, 2013) \cite{lr_so_dm_2013}. 
+O modelo com o qual pretendemos modelar os dois problemas anteriores é o de Rosenzweig-MacArthur, que já foi utilizado por Luiz Rodrigues, Simone Ossani e Diomar Mistro (2013) \cite{lr_so_dm_2013} para simular um sistema predador-presa em que o predador é infectado por uma doença, o que adiciona à equação uma taxa de mortalidade. 
 
 Em nosso estudo, a simulação será feita com a inclusão de um superpredador sem capacidade de reprodução. Em cada um dos casos ele será de uma espécie predadora de vespas e joaninhas respectivamente. A ideia é que, embora não se reproduza, sua presença no sistema cause uma redução (ainda que possivelmente temporária) de predadores. Eis abaixo as equações do sistema (os parâmetros descritos na análise dimensional serão detalhados posteriormente):
 
