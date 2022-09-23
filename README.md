@@ -6,7 +6,7 @@ Professor: Flávio Codeço Coelho
 
 Tema: Modelos Matemáticos Predador-Presa no Controle de Pragas em Plantações de Citros e Cana-de-açúcar
 
-Roteiro do trabalho: https://github.com/fccoelho/Modelagem-Matematica-IV/blob/master/Trabalhos%20Alunos/2021/A1_A2.md
+Roteiro do trabalho: https://github.com/fccoelho/Modelagem-Matematica-IV/blob/master/Trabalhos%20Alunos/Requisitos_A1.md
 
 Artigos base:
 
