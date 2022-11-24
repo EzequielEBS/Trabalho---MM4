@@ -16,3 +16,5 @@ Artigos base:
 - [Análise das Soluções Numéricas do Modelo do Tipo Presa-Predador de Holling-Tanner](https://github.com/EzequielEBS/Trabalho-MM4/blob/main/Exemplos%20de%20artigos/An%C3%A1lise%20das%20solu%C3%A7%C3%B5es%20num%C3%A9ricas%20do%20modelo%20do%20tipo%20presa-predador%20de%20Holling-Tanner.pdf)
 - [Analysis of The Rosenzweig-MacArthur Predator-Prey Model with Anti-Predator Behavior](https://github.com/EzequielEBS/Trabalho-MM4/blob/main/Exemplos%20de%20artigos/11472-33923-1-PB.pdf)
 - [Equações de Lotka-Volterra Aplicadas ao Controle Biológico da Broca da Cana-de-açúcar](https://github.com/EzequielEBS/Trabalho-MM4/blob/main/Exemplos%20de%20artigos/_Broca%20da%20cana%20-%20Isaias%20de%20Jesus.pdf)
+
+A planilha sage com as análises realizadas pode ser acessada [aqui](https://cocalc.com/share/public_paths/f6456567d4782494b9e23ca321f6d6c706649535).
