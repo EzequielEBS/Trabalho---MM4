@@ -1,1 +1,17 @@
 \section{Discussão}
+
+Inicialmente, utilizamos parâmetros calculados nos artigos citados ou fizemos uma estimativa deles para tentar representar a realidade. Em seguida, fizemos algumas alterações nos parâmetros com o intuito de analisar as diferentes formas de crescimento das populações. 
+
+%%%%%%%%%%%%%%%%%%%%%%%% L-V %%%%%%%%%%%%%%%%%%%%%%%%%%%
+Para o modelo de Lotka-Volterra, quando o predador possui uma taxa de decrescimento alta na ausência de presas ($d$), a população tende a diminuir com o passar do tempo, independentemente das condições iniciais analisadas. Quando diminuímos essa taxa e aumentamos a ``capacidade de predação das vespas'' ($b$ e $c$), percebemos que, para diferentes condições iniciais, a população de predadores tende a ficar maior que a população de brocas rapidamente.
+
+%%%%%%%%%%%%%%%%%%%%%%%% H-T %%%%%%%%%%%%%%%%%%%%%%%%%%%
+No modelo de Holling-Tanner, com parâmetros calculados no artigo de M. S. Peixoto, L. C. Barros, e R. C. Bassanezi \cite{mp_lb_rb_2005} (2005) podemos observar que, com diferentes condições iniciais, a população de predadores sempre permanece relativamente pequena e equilibrada. Por outro lado, a população de pulgões oscila de maneira mais acentuada inicialmente e, à medida que o tempo passa, tende a oscilar cada vez menos e ficar controlada. Ao deixar as condições de sobrevivência das joaninhas mais favoráveis, aumentando $s$ e diminuindo $r$, observamos que essa população continua equilibrada, mas a população de pulgões oscila muito menos e atinge um certo estado de controle mais rapidamente. Analogamente, ao aumentar $m$ e diminuir $A$, podemos ver que as características mencionadas anteriormente acontecem de maneira bem mais rápida.
+
+%%%%%%%%%%%%%%%%%%%%%%%% R-M %%%%%%%%%%%%%%%%%%%%%%%%%%%
+Para o uso do modelo de Rosenzweig-MacArthur, os parâmetros referentes à equação que descreve a população de presas no modelo de Holling-Tanner puderam ser mantidos, uma vez que o parâmetro adicional tem influência apenas sobre a população de predadores. O parâmetro que demandou uma análise mais aprofundada foi o $c$, que diz respeito à qualidade alimentícia das presas. 
+\
+
+Vejamos primeiramente o caso vespa-broca: no modelo sem superpredador, uma vespa conseguia reproduzir uma prole com cerca de 12 novas vespas para cada broca consumida. Uma análise semelhante foi feita para o caso joaninha-pulgão: na ausência de um superpredador (isto é, com seu ciclo de vida completo), uma joaninha conseguia reproduzir uma prole com cerca de 22 novas joaninhas para cada pulgão consumido. Porém, ao se adicionar temporariamente um superpredador ao sistema (um pássaro que se alimenta apenas de vespas/joaninhas), o valor de $c$ caiu consideravelmente em ambos os casos. Isso ocorre pois o pássaro pode se alimentar de presas em qualquer fase de suas vidas, incluindo aquelas que ainda não se reproduziram. Com as devidas adequações (obtidas através de tentativa e erro por falta de dados concretos), os valores de $c$ que se ajustam bem ao modelo estão contidos idealmente em [0.06, 0.09].
+
+Desse modo, a interação entre as espécies permaneceu sempre cíclica quando variadas as populações iniciais: as populações de presas cresciam até serem controladas pelas de predadores, que ao diminuírem permitiam um novo crescimento das presas e assim sucessivamente.
